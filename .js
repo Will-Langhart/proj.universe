@@ -219,7 +219,6 @@ const planets = {
         Global_Magnetic_Field: "Unknown"
     }
 };
-
 // Function to retrieve and display planet data
 function displayPlanetData(planetName) {
     const planet = planets[planetName];
@@ -228,10 +227,29 @@ function displayPlanetData(planetName) {
     if (planet && dataContainer) {
         const planetData = `
             <div class="planet-data">
-                <h2>Planet: ${planetName}</h2>
-                <p>Mass (10^24 kg): ${planet.Mass_kg}</p>
-                <p>Diameter (km): ${planet.Diameter_km}</p>
-                <!-- Add more properties as needed -->
+                <h2>${planetName}</h2>
+                <ul>
+                    <li><strong>Mass (10^24 kg):</strong> ${planet.Mass_kg}</li>
+                    <li><strong>Diameter (km):</strong> ${planet.Diameter_km}</li>
+                    <li><strong>Density (kg/m3):</strong> ${planet.Density_kg_m3}</li>
+                    <li><strong>Gravity (m/s2):</strong> ${planet.Gravity_m_s2}</li>
+                    <li><strong>Escape Velocity (km/s):</strong> ${planet.Escape_Velocity_km_s}</li>
+                    <li><strong>Rotation Period (hours):</strong> ${planet.Rotation_Period_hours}</li>
+                    <li><strong>Length of Day (hours):</strong> ${planet.Length_of_Day_hours}</li>
+                    <li><strong>Distance from Sun (10^6 km):</strong> ${planet.Distance_from_Sun_106_km}</li>
+                    <li><strong>Perihelion (10^6 km):</strong> ${planet.Perihelion_106_km}</li>
+                    <li><strong>Aphelion (10^6 km):</strong> ${planet.Aphelion_106_km}</li>
+                    <li><strong>Orbital Period (days):</strong> ${planet.Orbital_Period_days}</li>
+                    <li><strong>Orbital Velocity (km/s):</strong> ${planet.Orbital_Velocity_km_s}</li>
+                    <li><strong>Orbital Inclination (degrees):</strong> ${planet.Orbital_Inclination_degrees}</li>
+                    <li><strong>Orbital Eccentricity:</strong> ${planet.Orbital_Eccentricity}</li>
+                    <li><strong>Obliquity to Orbit (degrees):</strong> ${planet.Obliquity_to_Orbit_degrees}</li>
+                    <li><strong>Mean Temperature (C):</strong> ${planet.Mean_Temperature_C}</li>
+                    <li><strong>Surface Pressure (bars):</strong> ${planet.Surface_Pressure_bars}</li>
+                    <li><strong>Number of Moons:</strong> ${planet.Number_of_Moons}</li>
+                    <li><strong>Ring System:</strong> ${planet.Ring_System}</li>
+                    <li><strong>Global Magnetic Field:</strong> ${planet.Global_Magnetic_Field}</li>
+                </ul>
             </div>
         `;
 
@@ -242,6 +260,10 @@ function displayPlanetData(planetName) {
     }
 }
 
-// Example usage:
-displayPlanetData("NEPTUNE");  // Retrieve and display Neptune's data
-displayPlanetData("PLUTO");    // Retrieve and display Pluto's data
+// Example usage for all planets
+const planetNames = Object.keys(planets);
+
+// Display data for all planets
+planetNames.forEach((planetName) => {
+    displayPlanetData(planetName);
+});
