@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Universe</title>
+  <style>
+    /* CSS styles here */
+  </style>
+</head>
+<body>
+  <!-- Galactic Canvas -->
+  <canvas id="galacticCanvas"></canvas>
+
+  <!-- Main Content Container -->
+  <div id="mainContent">
+    <!-- Sun -->
+    <div class="sun"></div>
+  
+    <!-- HTML container to display planet details -->
+    <div id="planetDetailsContainer">
+      <!-- Mercury -->
+      <div class="planet" id="mercury">
+        <!-- Planet Data -->
+        <div class="planet-data">
+          <div class="dashed-arrow"></div>
+          <p>Planet: Mercury</p>
+          <p>Distance from Sun: 57.9 million km</p>
+          <p>Type: Terrestrial</p>
+          <p>Additional Data: Mercury is the closest planet to the Sun and has extreme temperature variations.  Mass_kg = 0.330e24,
+        Diameter_km = 4879,
+        Density_kg_m3 = 5429,
+        Gravity_m_s2 = 3.7,
+        Escape_Velocity_km_s = 4.3,
+        Rotation_Period_hours = 1407.6,
+        Length_of_Day_hours = 4222.6,
+        Distance_from_Sun_106_km = 57.9,
+        Perihelion_106_km = 46.0,
+        Aphelion_106_km = 69.8,
+        Orbital_Period_days = 88.0,
+        Orbital_Velocity_km_s = 47.4,
+        Orbital_Inclination_degrees = 7.0,
+        Orbital_Eccentricity = 0.206,
+        Obliquity_to_Orbit_degrees = 0.034,
+        Mean_Temperature_C = 167,
+        Surface_Pressure_bars = 0,
+        Number_of_Moons = 0,
+        Ring_System = "No",
+        Global_Magnetic_Field = "Yes"</p>
+        </div>
+      </div>
+      <!-- Venus -->
+      <div class="planet" id="venus">
+        <!-- Planet Data -->
+        <div class="planet-data">
+          <div class="dashed-arrow"></div>
+          <p>Planet: Venus</p>
+          <p>Distance from Sun: 108.2 million km</p>
+          <p>Type: Terrestrial</p>
+          <p>Additional Data: Venus is often referred to as Earth's "sister planet" due to its similar size and composition.
+           Mass_kg = 4.87e24,
+        Diameter_km = 12104,
+        Density_kg_m3 = 5243,
+        Gravity_m_s2 = 8.9,
+        Escape_Velocity_km_s = 10.4,
+        Rotation_Period_hours = -5832.5,
+        Length_of_Day_hours = 2802.0,
+        Distance_from_Sun_106_km = 108.2,
+        Perihelion_106_km = 107.5,
+        Aphelion_106_km = 108.9,
+        Orbital_Period_days = 224.7,
+        Orbital_Velocity_km_s = 35.0,
+        Orbital_Inclination_degrees = 3.4,
+        Orbital_Eccentricity = 0.007,
+        Obliquity_to_Orbit_degrees = 177.4,
+        Mean_Temperature_C = 464,
+        Surface_Pressure_bars = 92,
+        Number_of_Moons = 0,
+        Ring_System = "No",
+        Global_Magnetic_Field = "No"
+          </p>
+        </div>
+      </div>
+      <!-- Earth -->
+      <div class="planet" id="earth">
+        <!-- Planet Data -->
+        <div class="planet-data">
+          <div class="dashed-arrow"></div>
+          <p>Planet: Earth</p>
+          <p>Distance from Sun: 149.6 million km</p>
+          <p>Type: Terrestrial</p>
+          <p>Additional Data: The third planet from the Sun in our solar system, Earth is the only known celestial body to support life.
+           Mass_kg = 5.97e24,
+        Diameter_km = 12756,
+        Density_kg_m3 = 5514,
+        Gravity_m_s2 = 9.8,
+        Escape_Velocity_km_s = 11.2,
+        Rotation_Period_hours = 23.9,
+        Length_of_Day_hours = 24.0,
+        Distance_from_Sun_106_km = 149.6,
+        Perihelion_106_km = 147.1,
+        Aphelion_106_km = 152.1,
+        Orbital_Period_days = 365.2,
+        Orbital_Velocity_km_s = 29.8,
+        Orbital_Inclination_degrees = 0.0,
+        Orbital_Eccentricity = 0.017,
+        Obliquity_to_Orbit_degrees = 23.4,
+        Mean_Temperature_C = 15,
+        Surface_Pressure_bars = 1,
+        Number_of_Moons = 1,
+        Ring_System = "No",
+        Global_Magnetic_Field = "Yes"
+          </p>
+        </div>
+      </div>
+      <!-- Mars -->
+      <div class="planet" id="mars">
+        <!-- Planet Data -->
+        <div class="planet-data">
+          <div class="dashed-arrow"></div>
+          <p>Planet: Mars</p>
+          <p>Distance from Sun: 227.9 million km</p>
+          <p>Type: Terrestrial</p>
+          <p>Additional Data: Mars is often referred to as the "Red Planet" due to its reddish appearance.
+          Mass_kg = 0.642e24,
+        Diameter_km = 6792,
+        Density_kg_m3 = 3934,
+        Gravity_m_s2 = 3.7,
+        Escape_Velocity_km_s = 5.0,
+        Rotation_Period_hours = 24.6,
+        Length_of_Day_hours = 24.7,
+        Distance_from_Sun_106_km = 228.0,
+        Perihelion_106_km = 206.7,
+        Aphelion_106_km = 249.3,
+        Orbital_Period_days = 687.0,
+        Orbital_Velocity_km_s = 24.1,
+        Orbital_Inclination_degrees = 1.8,
+        Orbital_Eccentricity = 0.094,
+        Obliquity_to_Orbit_degrees = 25.2,
+        Mean_Temperature_C = -65,
+        Surface_Pressure_bars = 0.01,
+        Number_of_Moons = 2,
+        Ring_System = "No",
+        Global_Magnetic_Field = "No"
+          </p>
+        </div>
+      </div>
+      <!-- Jupiter -->
+      <div class="planet" id="jupiter">
+        <!-- Planet Data -->
+        <div class="planet-data">
+          <div class="dashed-arrow"></div>
+          <p>Planet: Jupiter</p>
+          <p>Distance from Sun: 778.3 million km</p>
+          <p>Type: Gas Giant</p>
+          <p>Additional Data: Jupiter is the largest planet in our solar system and has a strong magnetic field.
+           Mass_kg = 1898e24,
+        Diameter_km = 142984,
+        Density_kg_m3 = 1326,
+        Gravity_m_s2 = 23.1,
+        Escape_Velocity_km_s = 59.5,
+        Rotation_Period_hours = 9.9,
+        Length_of_Day_hours = 9.9,
+        Distance_from_Sun_106_km = 778.5,
+        Perihelion_106_km = 740.6,
+        Aphelion_106_km = 816.4,
+        Orbital_Period_days = 4331,
+        Orbital_Velocity_km_s = 13.1,
+        Orbital_Inclination_degrees = 1.3,
+        Orbital_Eccentricity = 0.049,
+        Obliquity_to_Orbit_degrees = 3.1,
+        Mean_Temperature_C = -110,
+        Surface_Pressure_bars = "Unknown*",
+        Number_of_Moons = 92,
+        Ring_System = "Yes",
+        Global_Magnetic_Field = "Yes"
+          </p>
+        </div>
+      </div>
+      <!-- Saturn -->
+      <div class="planet" id="saturn">
+        <!-- Planet Data -->
+        <div class="planet-data">
+          <div class="dashed-arrow"></div>
+          <p>Planet: Saturn</p>
+          <p>Distance from Sun: 1.4 billion km</p>
+          <p>Type: Gas Giant</p>
+          <p>Additional Data: Saturn is known for its stunning ring system made up of ice and rock particles.
+           Mass_kg = 568e24,
+        Diameter_km = 120536,
+        Density_kg_m3 = 687,
+        Gravity_m_s2 = 9.0,
+        Escape_Velocity_km_s = 35.5,
+        Rotation_Period_hours = 10.7,
+        Length_of_Day_hours = 10.7,
+        Distance_from_Sun_106_km = 1432.0,
+        Perihelion_106_km = 1357.6,
+        Aphelion_106_km = 1506.5,
+        Orbital_Period_days = 10747,
+        Orbital_Velocity_km_s = 9.7,
+        Orbital_Inclination_degrees = 2.5,
+        Orbital_Eccentricity = 0.052,
+        Obliquity_to_Orbit_degrees = 26.7,
+        Mean_Temperature_C = -140,
+        Surface_Pressure_bars = "Unknown*",
+        Number_of_Moons = 83,
+        Ring_System = "Yes",
+        Global_Magnetic_Field = "Yes"
+          </p>
+        </div>
+      </div>
+      <!-- Uranus -->
+      <div class="planet" id="uranus">
+        <!-- Planet Data -->
+        <div class="planet-data">
+          <div class="dashed-arrow"></div>
+          <p>Planet: Uranus</p>
+          <p>Distance from Sun: 2.9 billion km</p>
+          <p>Type: Ice Giant</p>
+          <p>Additional Data: Uranus is unique among the planets because it rotates on its side.
+           Mass_kg = 86.8e24,
+        Diameter_km = 51118,
+        Density_kg_m3 = 1270,
+        Gravity_m_s2 = 8.7,
+        Escape_Velocity_km_s = 21.3,
+        Rotation_Period_hours = -17.2,
+        Length_of_Day_hours = 17.2,
+        Distance_from_Sun_106_km = 2867.0,
+        Perihelion_106_km = 2732.7,
+        Aphelion_106_km = 3001.4,
+        Orbital_Period_days = 30589,
+        Orbital_Velocity_km_s = 6.8,
+        Orbital_Inclination_degrees = 0.8,
+        Orbital_Eccentricity = 0.047,
+        Obliquity_to_Orbit_degrees = 97.8,
+        Mean_Temperature_C = -195,
+        Surface_Pressure_bars = "Unknown*",
+        Number_of_Moons = 27,
+        Ring_System = "Yes",
+        Global_Magnetic_Field = "Yes"
+          </p>
+        </div>
+      </div>
+      <!-- Neptune -->
+      <div class="planet" id="neptune">
+        <!-- Planet Data -->
+        <div class="planet-data">
+          <div class="dashed-arrow"></div>
+          <p>Planet: Neptune</p>
+          <p>Distance from Sun: 4.5 billion km</p>
+          <p>Type: Ice Giant</p>
+          <p>Additional Data: Neptune has a deep blue color and strong winds in its atmosphere.
+           Mass_kg = 102e24,
+        Diameter_km = 49528,
+        Density_kg_m3 = 1638,
+        Gravity_m_s2 = 11.0,
+        Escape_Velocity_km_s = 23.5,
+        Rotation_Period_hours = 16.1,
+        Length_of_Day_hours = 16.1,
+        Distance_from_Sun_106_km = 4515.0,
+        Perihelion_106_km = 4471.1,
+        Aphelion_106_km = 4558.9,
+        Orbital_Period_days = 59800,
+        Orbital_Velocity_km_s = 5.4,
+        Orbital_Inclination_degrees = 1.8,
+        Orbital_Eccentricity = 0.010,
+        Obliquity_to_Orbit_degrees = 28.3,
+        Mean_Temperature_C = -200,
+        Surface_Pressure_bars = "Unknown*",
+        Number_of_Moons = 14,
+        Ring_System = "Yes",
+        Global_Magnetic_Field = "Yes"
+          </p>
+        </div>
+      </div>
+      <!-- Add all the remaining planets here -->
+      <!-- Pluto -->
+      <div class="planet" id="pluto">
+        <!-- Planet Data -->
+        <div class="planet-data">
+          <div class="dashed-arrow"></div>
+          <p>Planet: Pluto</p>
+          <p>Distance from Sun: 5.9 billion km</p>
+          <p>Type: Dwarf Planet</p>
+          <p>Additional Data: Pluto was once considered the ninth planet in the solar system but was reclassified as a dwarf planet.
+           PLUTO = {
+        Mass_kg = 0.013e24,
+        Diameter_km = 2376,
+        Density_kg_m3 = 1850,
+        Gravity_m_s2 = 0.7,
+        Escape_Velocity_km_s = 1.3,
+        Rotation_Period_hours = -153.3,
+        Length_of_Day_hours = 153.3,
+        Distance_from_Sun_106_km = 5906.4,
+        Perihelion_106_km = 4436.8,
+        Aphelion_106_km = 7375.9,
+        Orbital_Period_days = 90560,
+        Orbital_Velocity_km_s = 4.7,
+        Orbital_Inclination_degrees = 17.2,
+        Orbital_Eccentricity = 0.244,
+        Obliquity_to_Orbit_degrees = 122.5,
+        Mean_Temperature_C = -225,
+        Surface_Pressure_bars = 0.00001,
+        Number_of_Moons = 5,
+        Ring_System = "No",
+        Global_Magnetic_Field = "Unknown"
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
